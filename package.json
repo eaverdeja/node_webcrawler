@@ -2,8 +2,12 @@
   "name": "webcrawler",
   "version": "1.0.0",
   "description": "A simple webcrawler CLI built with node.js",
-  "main": "index.js",
+  "main": "src/index.js",
+  "bin": "src/index.js",
   "scripts": {
+    "start": "NODE_ENV=development node src/index.js crawl",
+    "clear": "node src/index.js clear",
+    "build": "NODE_ENV=production pkg . --targets=node10",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +18,7 @@
     "inquirer": "^6.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
+    "rimraf": "^2.6.2",
     "striptags": "^3.1.1"
   }
 }
