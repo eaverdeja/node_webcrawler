@@ -5,8 +5,10 @@
   "main": "src/index.js",
   "bin": "src/index.js",
   "scripts": {
-    "start": "NODE_ENV=development node src/index.js crawl",
-    "clear": "node src/index.js clear",
+    "start": "NODE_ENV=development node src/index.js",
+    "crawl": "npm start crawl",
+    "clear": "npm start clear",
+    "help": "npm start -- --help",
     "build": "NODE_ENV=production pkg . --targets=node8-lin-x64 --out-path=dist/linux",
     "build:windows-x64": "NODE_ENV=production pkg . --targets=node8-win-x64 --out-path=dist/winx64",
     "build:windows-x86": "NODE_ENV=production pkg . --targets=node8-win-x86 --out-path=dist/winx86",
